@@ -1,0 +1,234 @@
+/* Variables */
+:root {
+	--dark-color: #1a2841;
+	--hover-on-dark-color: #293f66;
+	--green-color: #33d1c7;
+	--red-color: #ff3150;
+	--yellow-color: #ffc400;
+	--section-color: #eff7fa;
+}
+
+/* Global Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	/* min-height: 100vh; */
+	position: relative;
+	font-weight: 500;
+}
+
+.main-btn {
+	background-color: var(--red-color);
+	color: var(--yellow-color);
+}
+.main-btn:hover {
+	background-color: var(--yellow-color);
+}
+
+.main-title::after {
+	content: '';
+	height: 2px;
+	width: 100px;
+	background-color: var(--green-color);
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+/* Navbar */
+.navbar {
+	background-color: var(--dark-color);
+}
+
+.navbar .navbar-nav .nav-link {
+	color: white;
+}
+.navbar .navbar-nav .nav-link:hover {
+	background-color: var(--hover-on-dark-color);
+	border-radius: 20%;
+}
+
+.navbar .navbar-nav .nav-link.active .navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+	color: var(--green-color);
+}
+
+.navbar .search {
+	border-left: 2px solid var(--green-color);
+}
+
+.navbar .search svg {
+	color: var(--green-color);
+}
+
+.navbar-toggler {
+	color: white;
+	font-size: 25px;
+	border-color: white;
+}
+
+.navbar-toggler:focus {
+	box-shadow: none;
+}
+.navbar-toggler[aria-expanded='true'] {
+	border-color: var(--green-color);
+}
+/* Navbar */
+
+/* Landing */
+.landing {
+	background-color: var(--dark-color);
+	min-height: calc(100vh - 72px);
+}
+/* Landing */
+
+/* Features */
+.feat .icon-holder {
+	height: 200px;
+}
+.feat .icon-holder svg {
+	color: #33d1cc;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.feat .icon-holder .number {
+	font-size: 12rem;
+	color: var(--section-color);
+}
+.feat h4 {
+	color: var(--yellow-color);
+}
+/* Features */
+
+/* Work */
+.work {
+	background-color: var(--section-color);
+}
+
+.work ul .active {
+	background-color: var(--red-color);
+	color: var(--yellow-color);
+	border-radius: 10px;
+}
+
+.work ul li {
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+.work ul li:not(.active):hover {
+	color: var(--red-color);
+}
+
+.work .box {
+	position: relative;
+	overflow: hidden;
+	padding: 5px;
+}
+
+.work .box::before {
+	content: attr(data-work);
+	position: absolute;
+	background-color: #33d1c7c0;
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 1.5rem;
+	transition: 0.3s;
+	transform: translateX(calc(-100% - 5px));
+}
+
+.work .box:hover::before {
+	transform: translateX(0);
+	cursor: pointer;
+}
+/* Work */
+
+/* About us */
+.about-us .description {
+	max-width: 50%;
+}
+/* About us */
+
+/* Team */
+.team {
+	background-color: var(--section-color);
+}
+
+.team h2 {
+	color: var(--yellow-color);
+}
+
+.team h4 {
+	background-color: var(--green-color);
+	color: white;
+}
+/* Team */
+
+/* Project */
+.project {
+	background-color: var(--dark-color);
+}
+/* Project */
+
+/* Subscribe */
+.subscribe {
+	background-color: var(--yellow-color);
+}
+
+.subscribe input[type='email'] {
+	border: none;
+	border-bottom: 1px solid white;
+}
+.subscribe input[type='email']:focus {
+	outline: none;
+}
+.subscribe ::placeholder {
+	color: white;
+}
+.subscribe input[type='submit'] {
+	background-color: var(--dark-color);
+	color: var(--yellow-color);
+}
+/* Subscribe */
+
+/* Footer */
+
+.footer {
+	background-color: var(--dark-color);
+}
+
+.footer .creator-name {
+	color: var(--green-color);
+}
+
+.footer .company-name {
+	color: var(--yellow-color);
+}
+
+.footer .brands-list svg {
+	width: 20px;
+	height: 20px;
+}
+
+.facebook {
+	background-color: #1877f2;
+}
+.twitter {
+	background-color: #14171a;
+}
+.linkedin {
+	background-color: #0a66c2;
+}
+.youtube {
+	background-color: #ff0000;
+}
+
+/* Footer */
