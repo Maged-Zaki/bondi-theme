@@ -1,6 +1,4 @@
-# Bondi Theme
-
-Bondi Theme is a creative and colorful single page.
+## [Live Demo](https://maged-zaki.github.io/bondi-theme/)
 
 ## Overview:
 
